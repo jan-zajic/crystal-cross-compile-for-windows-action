@@ -1,0 +1,6 @@
+# action.yml
+name: 'Cross compile Crystal for Windows'
+description: 'Cross compile Crystal Compiler object for link on Windows'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
