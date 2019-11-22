@@ -6,11 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Configure apt, install packages and tools
 RUN apt-get update \	
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
-    && apt-get install -y curl gnupg build-essential llvm procps gdb linux-perf git \
-    # Clean up
-    #&& apt-get autoremove -y \
-    #&& apt-get clean -y \
-    #&& rm -rf /var/lib/apt/lists/*
+    && apt-get install -y curl gnupg build-essential llvm procps gdb linux-perf git
 
 #install crystal lang
 RUN curl -sSL https://dist.crystal-lang.org/apt/setup.sh | bash \
